@@ -1,0 +1,35 @@
+REM_BLOCK
+    Name: Windows 11 Basic Reconnaissance
+    DuckyScript: Windows 11 Basic Reconnaissance
+    Opens PowerShell, gets current user and IP config, then closes.
+    Author: Alex Kagansky
+    Course: CYBR 4950
+END_REM
+
+DELAY 2000       
+GUI r
+
+DELAY 300
+STRING powershell
+ENTER
+
+DELAY 300
+STRING whoami
+ENTER
+
+DELAY 300
+STRING ipconfig
+ENTER
+
+
+DELAY 300
+STRING $env:USERPROFILE\recon_info.txt
+ENTER
+
+DELAY 300
+STRING "whoami > $file; ipconfig >> $file; systeminfo >> $file"
+ENTER
+
+DELAY 1000
+STRING exit
+ENTER

