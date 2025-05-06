@@ -1,0 +1,1 @@
+This is a collection of some of the DuckyScript code that I wrote for my capstone project. Be advised, if you download the Windows NetCat Reverse Shell payload to a windows machine, Windows Defender will try to remove it from your system.
